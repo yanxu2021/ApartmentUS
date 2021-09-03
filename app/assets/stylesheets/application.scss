@@ -61,6 +61,7 @@ ul{
   background-image: url(./gallery.jpg);
   width:100vw;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .fa {
@@ -147,6 +148,10 @@ footer {
   border: 0.5px solid darkgreen;
   padding: 40px;
   margin: 1rem;
+}
+
+.card-group {
+  padding-bottom: 1.5rem;
 }
 
 .img {
