@@ -24,10 +24,10 @@ class Home extends React.Component {
         <br/>
         <br/>
         <div className="gallery">                              
-          <h3>Apartment Gallery</h3>
+          <h4>Apartment Gallery</h4>
           <br/>
           <br/>
-          
+
         </div>
       </div>
     )
