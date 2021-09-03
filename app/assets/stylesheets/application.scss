@@ -13,6 +13,7 @@ body{
 .page-body{
   text-align: center;
   padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 button {
@@ -124,7 +125,7 @@ header {
 /* ---FOOTER--- */
 footer {
   font-size: 15px;
-  position: fixed;
+  position:fixed;
   bottom: 0;
   width: 100%;
   background-color:#A2F84B;
@@ -132,4 +133,22 @@ footer {
   justify-content: space-around;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+/* ---INDEX--- */
+.cards {
+  float:none;
+  display:inline-block;
+  justify-content: center;
+  flex-direction: row;
+}
+.card {
+  text-align:initial;
+  border: 0.5px solid darkgreen;
+  padding: 40px;
+  margin: 1rem;
+}
+
+.img {
+  align-items: center;
 }

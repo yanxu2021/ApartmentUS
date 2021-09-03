@@ -1,9 +1,11 @@
-import React from "react"
-import { Button, Card, CardTitle, Col, Row} from "reactstrap"
-import {NavLink} from "react-router-dom" 
+import React, { Component } from 'react'
+import { NavLink } from "react-router-dom" 
+import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
+import img from '../assets/img.jpg'
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
+    let {apartments} = this.props
     return(
       <div className="page-body">
         <h3>We Create a Apartment Community For All</h3> 
@@ -23,11 +25,29 @@ class Home extends React.Component {
         <br/>
         <br/>
         <br/>
-        <div className="gallery">                              
+        <div className="gallery">
           <h4>Apartment Gallery</h4>
-          <br/>
-          <br/>
-
+          <div className="index-cards">
+            Testing
+            {apartments && apartments.map(apartment =>{
+              return(
+                        <Row key={apartment.id} className="cards">
+                            <Col md="800">
+                                <Card body>
+                                    <CardTitle tag="h4">{apartment.street}</CardTitle>
+                                    <CardTitle tag="h4">{apartment.city}, {apartment.state}</CardTitle>
+                                    <img width="550" src={img} alt="img" className="img" />
+                                    <br />
+                                    <br />
+                                    <NavLink to={`/apartmentshow/${apartment.id}`}><Button>More Info</Button></NavLink>
+                                </Card>
+                            </Col>
+                        </Row>
+                    )
+              })}
+            </div>
+              
+              
         </div>
       </div>
     )
