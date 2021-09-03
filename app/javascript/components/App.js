@@ -75,7 +75,10 @@ class App extends Component {
       <Router>
         <Header {...this.props} />
         <Switch>
-          <Route exact path="/" component={Home} />
+
+          <Route exact path="/" render={(props) => {
+            return <Home {...this.props} />
+          }}/>
 
           <Route exact path="/about" component={AboutUs} />
 
@@ -88,17 +91,20 @@ class App extends Component {
             let apartment = this.state.apartments.find(a => a.id === id)
             return <Show apartment={apartment} />
           }}/>
+
           {this.props.logged_in &&
             <Route path="/new" render={(props) => {
               return <New createApartment={this.createApartment} current_user={this.props.current_user} />
             }}/>
           }
+
           {this.props.logged_in &&
             <Route path="/myapartments" render={(props) => {
               let apartments = this.state.apartments.filter(a => a.id === this.props.current_user.id)
               return <MyApartment apartments={apartments} />
             }}/>
           }
+
           {this.props.logged_in &&
             <Route path="/edit/:id" render={(props) => {
               let apartment = this.state.apartments.find(apartment => apartment.id === +props.match.params.id)
@@ -111,6 +117,7 @@ class App extends Component {
               )
             }}/> 
           }
+
           <Route component={NotFound} />
         </Switch>
         <Footer />

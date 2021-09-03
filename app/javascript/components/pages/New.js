@@ -158,7 +158,7 @@ class New extends Component {
                 Submit
               </Button>
             </Form>
-            { this.state.submitted && <Redirect to="/myapartment" /> }
+            { this.state.submitted && <Redirect to="/myapartments" /> }
           </div>
         </div>
       </div>

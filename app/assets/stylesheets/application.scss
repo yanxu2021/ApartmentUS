@@ -21,6 +21,7 @@ button {
   background-color: #8B0000;
   color: white;
   margin-left: 20px;
+  border-radius: 12px;
 }
 
 button:hover {
@@ -80,6 +81,14 @@ ul{
   color:orangered
 }
 
+.nav-option {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding-bottom: 10px;
+
+}
+
 /* Facebook */
 .fa-facebook {
   background: #55ACEE;
@@ -97,7 +106,7 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: #a2f84b;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0
 }

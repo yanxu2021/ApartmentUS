@@ -7,8 +7,14 @@ import third from '../assets/3.jpg'
 
 class Home extends Component {
   render() {
+    const {
+      logged_in,
+    } = this.props
+    console.log(this.props)
     return(
       <div className="page-body">
+        <br/>
+        <br/>
         <h3>We Create a Apartment Community For All</h3> 
         <p>For anyone own or looking for an apartment, and not only a location but also a life style.<br/>
         It can be tough to find the right place to call your next home, <br/>
@@ -21,9 +27,14 @@ class Home extends Component {
         We are not only making it easier to sign a lease, <br/>
         but also sharing you more information about the community you are going to be invoved.</p>
         <br/>                
-        <NavLink to={`/index`}><Button>See All Apartments</Button></NavLink> 
-        <NavLink to={`/new`}><Button>Add Apartment</Button></NavLink>
-        <NavLink to={`/myapartments`}><Button>See My Apartments</Button></NavLink>                        
+
+        <div className="nav-option">
+          {/* <NavLink to="/" className="nav-link"></NavLink> */}
+          <a href={`/index`} className="nav-link"><Button>See All Apartment</Button></a>
+          {logged_in && <a href={`/new`} className="nav-link"><Button>Add Apartment</Button></a>}
+          {logged_in && <a href={`/myapartments`} className="nav-link"><Button> See My Apartments</Button></a>}
+        </div>
+
         <br/>
         <br/>
         <br/>
