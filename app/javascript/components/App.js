@@ -75,7 +75,10 @@ class App extends Component {
       <Router>
         <Header {...this.props} />
         <Switch>
-          <Route exact path="/" component={Home} />
+
+          <Route exact path="/" render={(props) => {
+            return <Home {...this.props} />
+          }}/>
 
           <Route exact path="/about" component={AboutUs} />
 
@@ -114,7 +117,7 @@ class App extends Component {
               )
             }}/> 
           }
-          
+
           <Route component={NotFound} />
         </Switch>
         <Footer />

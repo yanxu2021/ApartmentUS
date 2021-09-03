@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import mypic from '../assets/4.jpg'
 
 class MyApartment extends Component {
   render() {
@@ -19,6 +20,7 @@ class MyApartment extends Component {
                 <div>
                     {apartment.city}, {apartment.state}
                 </div>
+                <img width="600" src={mypic} alt="mypic" className="img" />
                 <br />
                 <NavLink to={`/show/${apartment.id}`}>
                   <Button>
