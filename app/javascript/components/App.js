@@ -14,11 +14,15 @@ import New from "./pages/New"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
 import Edit from "./pages/Edit"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
 class App extends React.Component{
   render(){
     return(
       <Router>
-        <h1>This is a React Component</h1>
+        <Header/>
+
         <Nav>
           <NavItem>
             <NavLink to="/">Home</NavLink>
@@ -48,6 +52,8 @@ class App extends React.Component{
             <Route path="/edit" component={ Edit } />
             <Route component={NotFound} />
         </Switch>
+
+        <Footer/>
       </Router>
     )
   }
