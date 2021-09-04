@@ -31,6 +31,7 @@ class New extends Component {
   handleSubmit = () => {
     this.props.createApartment(this.state.form)
     this.setState({submitted: true})
+    this.props.readApartment()
   }
 
   render() {

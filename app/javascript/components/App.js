@@ -94,7 +94,8 @@ class App extends Component {
 
           {this.props.logged_in &&
             <Route path="/new" render={(props) => {
-              return <New createApartment={this.createApartment} current_user={this.props.current_user} />
+              return <New readApartment={this.readApartment}
+              createApartment={this.createApartment} current_user={this.props.current_user} />
             }}/>
           }
 
