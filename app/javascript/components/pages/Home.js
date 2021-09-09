@@ -15,7 +15,7 @@ class Home extends Component {
       <div className="page-body">
         <br/>
         <br/>
-        <h3>We Create a Apartment Community For All</h3> 
+        <h3>We Create an Apartment Community For All</h3> 
         <p>For anyone own or looking for an apartment, and not only a location but also a life style.<br/>
         It can be tough to find the right place to call your next home, <br/>
         and finding it before it gets snapped up by another renter can be even tougher. <br/>
